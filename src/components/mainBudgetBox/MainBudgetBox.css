@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+.box{
+    border: 1px solid #CBCBCB;
+    border-radius: 3px;
+    /* margin: auto; */
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-bottom: 25px;
+    /* só pra visualizar */
+    width: 326px;
+    height: 305px;
+    max-width: 326px;
+    flex-grow: 1;
+    flex: 1 1 30%;
+}
+
+
+.box-title{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 18px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.box-subtitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 22px;
+    font-size: 14px;
+    margin-top: 3%;
+    color: #565656;
+}
+
+.box-hr {
+    width: 70%;
+}
+
+.budgets{
+    margin-top: 8%;
+    margin-bottom: 8%;
+}
+
+.div-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pics{
+    display: flex;
+    justify-content: center; 
+}
+.pics img{
+   margin: 8px;
+}
+
+
+.budget-button{
+    background: #EF7E31;
+    border: none !important;
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    color: #FFFFFF;
+    width: 70%;
+    height: 35px;
+}
