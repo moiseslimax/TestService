@@ -13,7 +13,7 @@ import { NavLink } from 'react-router-dom';
 export default class NavBar extends Component {
   render() {
     return (
-        <nav class="navbar fixed-top navbar-light navfix bg-light">
+        <nav class="navbar navfix navbar-toggleable-sm bg-inverse navbar-inverse fixed-top">
           <NavLink to="/" ><img src={logo} alt="logo" className="navbar-brand"/></NavLink>
 
             
@@ -26,7 +26,7 @@ export default class NavBar extends Component {
           </div>
             
           <div class="my-lg-0">
-            <img className="userPic" src={userPic}/>
+            <img alt="userpic" className="userPic" src={userPic}/>
             <span>Juliana</span>  
           </div>
         </nav>

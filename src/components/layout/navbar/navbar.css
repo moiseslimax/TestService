@@ -4,6 +4,8 @@
     background-color: white !important;
     border-bottom: 1px solid #CBCBCB;
     padding: .5rem 4rem !important;
+    /* max-height: auto;
+    height:auto; Add this */
 }
 
 .userPic {

@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+
 body{
     background: rgba(238, 238, 238, 0.5);
+    position: relative;
+    min-height: 100%;
 }

@@ -1,13 +1,32 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand');
-
 .budgetnav {
-    position: absolute;
-    left: 100%;
-    top: 150px;
     background: #EF7E31;
     border-bottom: 1px solid #CBCBCB;
-    /* padding: .5rem 4rem !important; */
-    display: absolute;
-    width: 1003;
-    min-height: 45px;
+    margin-top: 4%;
+}
+
+.arrow{
+    color: white;
+    /* margin-left: 50px; */
+}
+
+.bar-content{
+    /* display: flex;
+    justify-content: center; */
+    padding: 3px 0 3px 70px;
+    margin: auto;
+    color: white;
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 18px;
+}
+
+.bar-more{
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 14px;
+    color: #FFFFFF;
 }

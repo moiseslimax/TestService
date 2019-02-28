@@ -7,7 +7,7 @@ import './Footer.css';
 export default class Footer extends Component {
   render() {
     return (
-      <div>
+      <div className="footer">
         <div className="footer-info">
             <div className="info">
                 <span className="info-title">E se algo der errado?</span>
@@ -33,8 +33,16 @@ export default class Footer extends Component {
                 <span className="info-link">Saiba Mais</span>
             </div>
         </div>
-        <div>
-        <img src={logo} alt="logo" />
+        <div className="row footer-end">
+          <div className="col-sm-4">
+            <img src={logo} alt="logo" />
+          </div>
+         
+          <div className="col-sm-8">
+            <a href="/" className="float-right">Central de Ajuda</a>
+            <a href="/" className="float-right">Termos de uso</a>
+            <a href="/" className="float-right">Código de conduta</a>
+          </div>
         </div>
       </div>
     )

@@ -21,9 +21,9 @@ export default class MainContent extends Component {
                 <span className="col-sm-8 title">Meus Orçamentos</span>
 
                 <div className="col-sm-4 content-menu">
-                    <a className="active margin-none">Abertos(4)</a>
-                    <a style={{marginLeft: "15%"}}>Finalizados(5)</a>
-                    <a style={{marginLeft: "15%"}}>Cancelados(5)</a>
+                    <a href="/" className="active margin-none">Abertos(4)</a>
+                    <a href="/" style={{marginLeft: "15%"}}>Finalizados(5)</a>
+                    <a href="/" style={{marginLeft: "15%"}}>Cancelados(5)</a>
                 </div>
             </div>
 

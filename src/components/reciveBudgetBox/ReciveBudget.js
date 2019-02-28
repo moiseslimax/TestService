@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import userPic from '../../img/userPic.png';
 
 //Router 
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 
 //CSS
 import './ReciveBudget.css'
@@ -21,7 +21,7 @@ export default class ReciveBudget extends Component {
     return (
       <div className="recived">
         {
-          this.state.isHired == true 
+          this.state.isHired === true 
           ? (
               <div className='hired'>
                 CONTRATADO
@@ -30,7 +30,7 @@ export default class ReciveBudget extends Component {
           : ''
         }
         <div className="recive-box">
-          <img className="recive-userimg" src={userPic}></img>
+          <img alt="reciveuserpic" className="recive-userimg" src={userPic}></img>
           <div>
             <span className="recive-usernamer">Frank</span>
             <div>
@@ -46,7 +46,7 @@ export default class ReciveBudget extends Component {
           </div>    
         </div>
         {
-          this.state.isHired == false 
+          this.state.isHired === false 
           ? (
           <div>
             <hr className="box-hr"/>

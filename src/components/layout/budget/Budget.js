@@ -18,10 +18,11 @@ export default class Budget extends Component {
     render() {
         return (
         <div className="content">
+        <BudgetBar />
             {
-                this.state.isOneHired == false 
+                this.state.isOneHired === false 
                 ? ( 
-                <div>
+                <div style={{paddingTop: 30}}>
                     <span className="budget-title">Orçamentos Recebidos</span>           
                     <div className="content-board">
                         <div className="boxes">
