@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+.recived{
+    border: 1px solid #CBCBCB;
+    border-radius: 3px;
+    /* margin: auto; */
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-bottom: 25px;
+    /* só pra visualizar */
+    width: 326px;
+    height: 180px;
+    max-width: 326px;
+    flex-grow: 1;
+    flex: 1 1 30%;
+}
+.recive-box{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    margin: 5%;
+}
+
+.recive-userimg{
+    border-radius: 50%;
+    width: 60%;
+    margin-left: 18%;
+
+}
+
+.recive-usernamer{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-size: 15px;
+    text-align: center;
+
+    color: #565656;
+}
+
+.recive-value{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+    font-size: 20px;
+    color: #565656;
+}
+
+.recive-done{
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 13px;
+    color: #565656;
+}
+
+.recive-hire{
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 23px;
+    font-size: 18px;
+    color: #EF7E31;
+    display: flex;
+    justify-content: center;
+}
+
+.box-hr {
+    width: 75%;
+    margin-bottom: 3 !important;
+}
+
+.fa-star{
+    color: #F8CC46;
+    font-size: 14px;
+}
+
+.hired{
+    background: #4983EF;
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 19px;
+    font-size: 12px;
+    width: 101px;
+    height: 23px;
+    color: #FFFFFF;
+    text-align: center;
+    border-radius: 2%;
+    margin: 4%;
+}

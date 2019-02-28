@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+.content{
+    margin: 7%;
+}
+
+.budget-title{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-size: 20px;
+    color: #565656;
+    display: flex;
+    justify-content: center;
+}
+.active {
+    color: #EF7E31 !important;
+}
+
+
+.content-menu a {
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 16px;
+    text-decoration: none !important;
+    color: #212529;
+}
+
+.content-board{
+    margin-top: 20px;
+    background: #FFFFFF;
+    border: 1px solid #EEEEEE;
+    box-sizing: border-box;
+}
+
+.boxes {
+    margin: 3%;
+    display: flex;
+	flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.notHired{
+    opacity: 0.6;
+}
