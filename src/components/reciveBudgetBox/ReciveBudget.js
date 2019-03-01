@@ -1,38 +1,16 @@
 import React, { Component } from 'react'
-
-import userPic from '../../img/userPic.png';
 import StarRating from '../starRating/StarRating';
+import PropTypes from 'prop-types';
 
 //CSS
 import './ReciveBudget.css'
 
-const datateste = {
-  id: "16",
-  orderId: "1",
-  name: "Tyree",
-  avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/clubb3rry/128.jpg",
-  price: "869.00",
-  stars: 2.2,
-  ratings: 82,
-  servicesDone: 51,
-  hired: false
-}
-
-
 export default class ReciveBudget extends Component {
-    constructor(props){
-      super(props)
-      this.state = {
-        isHired: false
-      }
-    }
-
-
   render() {
     return (
       <div className="recived">
         {
-          this.state.isHired === true 
+         this.props.data.hired === true 
           ? (
               <div className='hired'>
                 CONTRATADO
@@ -41,20 +19,22 @@ export default class ReciveBudget extends Component {
           : ''
         }
         <div className="recive-box">
-          <img alt="reciveuserpic" className="recive-userimg" src={datateste.avatar}></img>
+          <img alt="reciveuserpic" className="recive-userimg" src={this.props.data.avatar}></img>
           <div>
-            <span className="recive-usernamer">{datateste.name}</span>
+            <span className="recive-usernamer">{this.props.data.name}</span>
             <div>
-              <StarRating stars={datateste.stars}/>
-              <span className="recive-done">({datateste.ratings})</span>
+              {/* Return the amount of stars by props*/}
+              <StarRating stars={this.props.data.stars}/>
+              <span className="recive-done">({this.props.data.ratings})</span>
             </div>
-            <div className="recive-done">{datateste.servicesDone} Negócios fechados</div>
-            <div className="recive-value">{datateste.price}</div>
+            <div className="recive-done">{this.props.data.servicesDone} Negócios fechados</div>
+            <div className="recive-value">{this.props.data.price}</div>
           </div>    
         </div>
         {
-          this.state.isHired === false 
-          ? (
+         this.props.data.hired === false 
+          ? 
+          (
           <div>
             <hr className="box-hr"/>
             <span className="recive-hire">Contratar</span>
@@ -62,8 +42,20 @@ export default class ReciveBudget extends Component {
           )
           : ('')
         }
-        
       </div>
     )
   }
+}
+
+//Expected prop types
+ReciveBudget.propTypes = {
+    id: PropTypes.number.isRequired,
+    orderId: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    avatar: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    stars: PropTypes.number.isRequired,
+    ratings: PropTypes.number.isRequired,
+    servicesDone: PropTypes.number.isRequired,
+    hired: PropTypes.bool.isRequired,
 }

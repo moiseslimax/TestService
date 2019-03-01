@@ -1,15 +1,15 @@
-import React, { Component } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types';
 
-export default class StarRating extends Component {
-    constructor(props){
-        super(props);
-    }
-    
-  render() {
-    var stars = [];
-    for (let i = 0; i < this.props.stars; i++ ) {
+export default function StarRating(props) {
+    let stars = [];
+    for (let i = 0; i < props.stars; i++ ) {
       stars.push(<i class="fas fa-star" />);
     }
     return stars;
-  }
+}
+
+//Expected prop types
+StarRating.PropTypes = {
+  stars: PropTypes.number.isRequired
 }
