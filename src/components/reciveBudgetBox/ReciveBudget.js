@@ -1,12 +1,23 @@
 import React, { Component } from 'react'
 
 import userPic from '../../img/userPic.png';
-
-//Router 
-// import { NavLink } from 'react-router-dom';
+import StarRating from '../starRating/StarRating';
 
 //CSS
 import './ReciveBudget.css'
+
+const datateste = {
+  id: "16",
+  orderId: "1",
+  name: "Tyree",
+  avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/clubb3rry/128.jpg",
+  price: "869.00",
+  stars: 2.2,
+  ratings: 82,
+  servicesDone: 51,
+  hired: false
+}
+
 
 export default class ReciveBudget extends Component {
     constructor(props){
@@ -30,19 +41,15 @@ export default class ReciveBudget extends Component {
           : ''
         }
         <div className="recive-box">
-          <img alt="reciveuserpic" className="recive-userimg" src={userPic}></img>
+          <img alt="reciveuserpic" className="recive-userimg" src={datateste.avatar}></img>
           <div>
-            <span className="recive-usernamer">Frank</span>
+            <span className="recive-usernamer">{datateste.name}</span>
             <div>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <span className="recive-done">(65)</span>
+              <StarRating stars={datateste.stars}/>
+              <span className="recive-done">({datateste.ratings})</span>
             </div>
-            <div className="recive-done">28 Negócios fechados</div>
-            <div className="recive-value">R$ 200,00</div>
+            <div className="recive-done">{datateste.servicesDone} Negócios fechados</div>
+            <div className="recive-value">{datateste.price}</div>
           </div>    
         </div>
         {
