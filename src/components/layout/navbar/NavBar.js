@@ -15,7 +15,7 @@ export default class NavBar extends Component {
     return (
         <nav class="navbar navfix fixed-top">
          <i class="fas fa-bars"></i>
-         <NavLink to="/" ><img src={logo}  className="mainLogo" alt="logo"/></NavLink>
+         <NavLink to="/" ><img src={logo} align="left" className="mainLogo" alt="logo"/></NavLink>
 
           <div class="topnav">
             <NavLink to="/" ><a href="#home" class="active">Início</a></NavLink>

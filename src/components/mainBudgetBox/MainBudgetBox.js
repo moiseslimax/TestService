@@ -53,7 +53,7 @@ export default class MainBudgetBox extends Component {
           <div className="budgets">
             <div className="pics">
             { this.props.data.quotes.map(imgBudget => {
-              return <img alt="teste" style={{maxHeight: 40}} className="userPic" src={imgBudget.avatar}/>
+              return <img alt="userpic" style={{maxHeight: 35}} className="userPic" src={imgBudget.avatar}/>
             })
             }
             </div>
@@ -64,8 +64,8 @@ export default class MainBudgetBox extends Component {
           : 
           <div className="budgets">
             <div className="done-mini-box">
-              <img alt="teste" style={{maxHeight: 40}} className="userPic" src={filterDone.avatar}/>
-              <div className="">
+              <img alt="userpic" style={{maxHeight: 35}} className="userPic" src={filterDone.avatar}/>
+              <div style={{paddingLeft: 10}}>
                 <span>{filterDone.name}</span>
                 <div><StarRating stars={filterDone.stars}/><span className="recive-done" style={{paddingLeft: 5}}>({filterDone.servicesDone})</span></div>
               </div>

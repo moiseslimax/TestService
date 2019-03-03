@@ -39,10 +39,10 @@ export default class MainContent extends Component {
         return (
         <div className="content">
 
-            <div className="row">
-                <span className="col-sm-8 title">Meus Orçamentos</span>
+            <div className="">
+                <span className="title">Meus Orçamentos</span>
 
-                <div className="col-sm-4 content-menu">
+                <div className="content-menu">
                     <a href="#" className={this.state.page === 'abertos' ? "active" : '""'} onClick={(e) => {this.setState({page: 'abertos'})}}>Abertos({filterContract.length})</a>
                     <a href="#" className={this.state.page === 'finalizados' ? "active" : '""'} style={{marginLeft: "15%"}} onClick={(e) => {this.setState({page: 'finalizados'})}}>Finalizados({filterFinish.length})</a>
                     <a href="#" className={this.state.page === 'cancelados' ? "active" : '""'} style={{marginLeft: "15%"}} onClick={(e) => {this.setState({page: 'cancelados'})}}>Cancelados({filterCanceled.length})</a>

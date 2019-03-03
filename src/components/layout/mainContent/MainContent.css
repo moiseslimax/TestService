@@ -20,18 +20,34 @@
         display: flex;
         justify-content: center;
     }
+    .content-menu{
+        display: flex;
+        justify-content: center;
+        float: none !important;
+        margin: none !important;
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    .content-menu a {
+        font-size: 14px !important;
+    }
 }
+
 .active {
     color: #EF7E31 !important;
 }
 
-
+.content-menu{
+    float: right;
+    margin-right: 6%;
+}
 .content-menu a {
     font-family: Quicksand;
     font-style: normal;
     font-weight: normal;
     line-height: normal;
-    font-size: 16px;
+    font-size: 14px;
     text-decoration: none !important;
     color: #212529;
 }

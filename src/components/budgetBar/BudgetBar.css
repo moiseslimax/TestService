@@ -1,7 +1,11 @@
 .budgetnav {
     background: #EF7E31;
     border-bottom: 1px solid #CBCBCB;
-    margin-top: 4%;
+    margin-top: 50px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .arrow{
@@ -29,4 +33,15 @@
     line-height: normal;
     font-size: 14px;
     color: #FFFFFF;
+}
+
+@media screen and (max-width: 600px) {
+    .bar-content{
+        font-size: 15px;
+        padding: 0px 0px 0px 40px;
+    }
+
+    .bar-more{
+        font-size: 10px;
+    }
 }

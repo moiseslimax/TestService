@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 export default function StarRating(props) {
     let stars = [];
+    console.log(Math.round(props.stars), props.stars);
     for (let i = 0; i < props.stars; i++ ) {
       stars.push(<i class="fas fa-star" />);
     }
