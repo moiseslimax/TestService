@@ -13,19 +13,19 @@ import { NavLink } from 'react-router-dom';
 export default class NavBar extends Component {
   render() {
     return (
-        <nav class="navbar navfix navbar-toggleable-sm bg-inverse navbar-inverse fixed-top">
-          <NavLink to="/" ><img src={logo} alt="logo" className="navbar-brand"/></NavLink>
+        <nav class="navbar navfix fixed-top">
+         <i class="fas fa-bars"></i>
+         <NavLink to="/" ><img src={logo}  className="mainLogo" alt="logo"/></NavLink>
 
-            
           <div class="topnav">
             <NavLink to="/" ><a href="#home" class="active">Início</a></NavLink>
-              <a href="#news">Catálogo de serviços</a>
-              <a href="#contact">Meus orçamentos</a>
-              <a href="#about">Mensagens (4)</a>
-              <a href="#about">Ajuda</a>
+              <a href="#">Catálogo de serviços</a>
+              <a href="#">Meus orçamentos</a>
+              <a href="#">Mensagens (4)</a>
+              <a href="#">Ajuda</a>            
           </div>
             
-          <div class="my-lg-0">
+          <div>
             <img alt="userpic" className="userPic" src={userPic}/>
             <span>Juliana</span>  
           </div>

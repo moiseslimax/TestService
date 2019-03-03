@@ -6,58 +6,61 @@ import PropTypes from 'prop-types';
 //css
 import './Budget.css';
 
-//PROPS TEST
-const datateste = [
-        {
-          "id": "1",
-          "orderId": "1",
-          "name": "Catherine",
-          "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/dreizle/128.jpg",
-          "price": "760.00",
-          "stars": 5,
-          "ratings": 58,
-          "servicesDone": 85,
-          "hired": false
-        },
-        {
-          "id": "16",
-          "orderId": "1",
-          "name": "Tyree",
-          "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/clubb3rry/128.jpg",
-          "price": "869.00",
-          "stars": 2.2,
-          "ratings": 82,
-          "servicesDone": 51,
-          "hired": false
-        },
-        {
-          "id": "17",
-          "orderId": "4",
-          "name": "Tyree",
-          "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/clubb3rry/128.jpg",
-          "price": "869.00",
-          "stars": 2.2,
-          "ratings": 82,
-          "servicesDone": 51,
-          "hired": false
-        },
-      ]
-
-const pageName = 'Marido de aluguel';
-//PROPS TEST
-
 export default class Budget extends Component {
-     
+    constructor(props){
+        super(props);
+        this.state = {
+            page: 'abertos',
+            budgetInfo: [],
+            loading: false,
+            pageName: ''
+        }
+      }
+    
+    componentWillMount = () => {
+        this.setState({loading: true})
+        let url = window.location.pathname;
+        let budgetId = url.replace("/budget/", "")
+        console.log(budgetId);
+        //Getting data from API
+        fetch('http://5c5d8680ef282f0014c3d956.mockapi.io/api/v1/orders', {
+                method: 'get' // opcional 
+            })
+            .then((response) => {
+                response.json().then(data => {
+                    let filterBudget = data.find((datax) => datax.id === budgetId)
+                    this.setState({budgetInfo: filterBudget.quotes, pageName: filterBudget.serviceName})
+                    this.setState({loading: false})
+                }) 
+            })
+            .catch((err) => { 
+                console.error(err); 
+            });
+    }
+    
     render() {
-        
         //structuring filters
-        const OriginalArray = datateste;
-        const filterDone = datateste.find((datax) => datax.hired === true);
-        const filterHired = datateste.filter((datax) => datax.hired === false);
-
+        const filterDone = this.state.budgetInfo.find((datax) => datax.hired === true);
+        const filterHired = this.state.budgetInfo.filter((datax) => datax.hired === false);
+        console.log('state : ', this.state.budgetInfo)
+        while (this.setState.loading === true) {
+            return (
+            <div class="content">
+                <div class="loader"></div>
+                <div class="loader"></div>
+                <div class="loader"></div>
+                <div class="loader"></div>
+                <div class="loader"></div>
+                <div class="loader"></div>
+                <div class="loader"></div>
+                <div class="loader"></div>
+                <div class="loader"></div>
+            </div>
+            )
+        }
         return (
             <div className="content">
-            <BudgetBar pageName={pageName}/>
+            <BudgetBar pageName={this.state.pageName}/>
                 {
                     filterDone === undefined 
                     ? ( 
@@ -66,7 +69,7 @@ export default class Budget extends Component {
                         <div className="content-board">
                             <div className="boxes">
                             {
-                                OriginalArray.map(data => {
+                                this.state.budgetInfo.map(data => {
                                     return <ReciveBudget data={data}/>
                                 })
                             }

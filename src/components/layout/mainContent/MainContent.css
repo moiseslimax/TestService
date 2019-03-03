@@ -10,6 +10,17 @@
     font-size: 20px;
     color: #565656;
 }
+
+@media screen and (max-width: 600px) {
+    .row{
+        width: 100%;
+    }
+    .title{
+        padding-top: 35px;
+        display: flex;
+        justify-content: center;
+    }
+}
 .active {
     color: #EF7E31 !important;
 }
