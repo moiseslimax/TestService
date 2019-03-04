@@ -38,10 +38,10 @@ export default class Footer extends Component {
             <img src={logo} alt="logo" />
           </div>
          
-          <div className="">
-            <a href="/" className="footer-links">Central de Ajuda</a>
-            <a href="/" className="footer-links">Termos de uso</a>
-            <a href="/" className="footer-links">Código de conduta</a>
+          <div className="footer-links">
+            <a href="/" className="">Central de Ajuda</a>
+            <a href="/" className="">Termos de uso</a>
+            <a href="/" className="">Código de conduta</a>
           </div>
         </div>
       </div>

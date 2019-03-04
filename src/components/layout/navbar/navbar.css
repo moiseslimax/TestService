@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand');
-
 .navfix {
     background-color: white !important;
     border-bottom: 1px solid #CBCBCB;
@@ -11,7 +9,6 @@
 }
 
 .topnav a {
-    float: left;
     font-family: Quicksand;
     font-style: normal;
     font-weight: normal;
@@ -26,14 +23,57 @@
     color: #EF7E31 !important;
 }
 
-.mainLogo{
-  /* padding-right: 150px; */
-}
 .navfix i {
   display: none;
 }
 
-@media screen and (max-width: 600px) {
+.narrowLinks a {
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 16px;
+  margin-left: 14px;
+  text-decoration: none !important;
+  color: #212529;
+}
+
+@media screen and (max-width: 1920px) {
+  .topnav{
+    padding-left: 550px;
+  }
+}
+
+@media screen and (max-width: 1750px) {
+  .topnav{
+    padding-left: 350px;
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  .topnav{
+    padding-left: 50px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .topnav{
+    padding-left: none;
+  }
+  .topnav a {
+    margin-left: 3rem;
+  }
+
+}
+
+@media screen and (max-width: 1050px) {
+  .topnav a {
+    margin-left: 1rem;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 750px) {
     .topnav {
       display: none;
       padding: 0 !important;
@@ -45,19 +85,22 @@
     .mainLogo{
      margin-right: 150px;
     }
- 
-  }
-
-  @media screen and (max-width: 375px) {
-    .mainLogo{
-     margin-right: 110px;
+    .narrowLinks{
+      display: block;
     }
  
   }
 
-  @media screen and (max-width: 320px) {
-    .mainLogo{
-     margin-right: 90px;
-    }
- 
+@media screen and (max-width: 375px) {
+  .mainLogo{
+    margin-right: 110px;
   }
+
+}
+
+@media screen and (max-width: 320px) {
+  .mainLogo{
+    margin-right: 90px;
+  }
+
+}
