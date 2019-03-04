@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import ReciveBudget from '../../reciveBudgetBox/ReciveBudget'
 import BudgetBar from '../../budgetBar/BudgetBar';
-import PropTypes from 'prop-types';
 
 //css
 import './Budget.css';
@@ -42,7 +41,7 @@ export default class Budget extends Component {
         //structuring filters
         const filterDone = this.state.budgetInfo.find((datax) => datax.hired === true);
         const filterHired = this.state.budgetInfo.filter((datax) => datax.hired === false);
-        console.log('state : ', this.state.budgetInfo)
+
         while (this.setState.loading === true) {
             return (
             <div class="content">

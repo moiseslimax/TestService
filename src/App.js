@@ -5,7 +5,8 @@ import NavBar from './components/layout/navbar/NavBar';
 import MainContent from './components/layout/mainContent/MainContent';
 import Budget from './components/layout/budget/Budget';
 import Footer from './components/layout/footer/Footer';
-// import BudgetBar from './components/budgetBar/BudgetBar';
+
+
 //CSS
 import './App.css';
 

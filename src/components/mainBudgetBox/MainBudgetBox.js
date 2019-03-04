@@ -17,10 +17,8 @@ export default class MainBudgetBox extends Component {
     var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
 
     //structuring filters
-    const OriginalArray = this.props.data;
     const filterDone = this.props.data.quotes.find((datax) => datax.hired === true);
-    const filterHired = this.props.data.quotes.filter((datax) => datax.hired === false);
-
+    
     return (
       <div className="box">
         <div>
@@ -28,7 +26,7 @@ export default class MainBudgetBox extends Component {
         </div>
 
         <div>
-          {filterDone === undefined && this.props.data.status != 'cancelado'
+          {filterDone === undefined && this.props.data.status !== 'cancelado'
           ? <span className="box-subtitle">Validade: {diffDays} dias</span>
           : <div>
                   {(() => {
