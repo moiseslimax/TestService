@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import MainBudgetBox from '../../mainBudgetBox/MainBudgetBox'
-
+import data from './api.json';
 //css
 import './MainContent.css';
 
@@ -14,19 +14,7 @@ export default class MainContent extends Component {
       }
     
     componentWillMount = () => {
-        //Getting data from API
-        fetch('http://5c5d8680ef282f0014c3d956.mockapi.io/api/v1/orders', {
-                method: 'get' // opcional 
-            })
-            .then((response) => {
-                response.json().then(data => {
-                    // console.log(data);
-                    this.setState({apidata: data})
-                }) 
-            })
-            .catch((err) => { 
-                console.error(err); 
-            });
+        this.setState({apidata: data})
     }
      
     render() {

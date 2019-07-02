@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
 //Images
-import logo from '../../../img/logo.png';
+import logo from '../../../img/logo.jpg';
 import userPic from '../../../img/userPic.png';
 
 //css
-import './Navbar.css'
+import './navbar.css'
 
 //Router
 import { NavLink } from 'react-router-dom'; 

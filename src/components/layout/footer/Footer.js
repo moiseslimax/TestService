@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import logo from '../../../img/footer_logo.png';
+import logo from '../../../img/footer_logo.jpg';
 
 //css
 import './Footer.css';
